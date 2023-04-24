@@ -1,0 +1,11 @@
+name: Dependency Calculation UI
+type: module
+description: Provides UI for Dependency Calculation.
+core_version_requirement: '>=9.2'
+dependencies:
+  - drupal:depcalc
+
+# Information added by Drupal.org packaging script on 2022-09-28
+version: '8.x-1.16'
+project: 'depcalc'
+datestamp: 1664348901

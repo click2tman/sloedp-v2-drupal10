@@ -1,0 +1,12 @@
+name: Dependency Calculation
+type: module
+description: Calculates recursive dependencies of any entity.
+core_version_requirement: '>=9.2'
+test_dependencies:
+  - drupal:entity_embed
+  - drupal:paragraphs
+
+# Information added by Drupal.org packaging script on 2022-09-28
+version: '8.x-1.16'
+project: 'depcalc'
+datestamp: 1664348901

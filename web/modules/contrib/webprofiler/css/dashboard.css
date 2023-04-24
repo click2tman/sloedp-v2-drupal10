@@ -1,0 +1,165 @@
+.webprofiler__dashboard {
+  display: flex;
+}
+
+.webprofiler__info {
+  border: 1px solid #dedfe4;
+  box-shadow: 0 4px 10px 0 #0000001a;
+  font-size: 18px;
+  margin-bottom: 24px;
+  padding: 22px;
+}
+
+.webprofiler__collectors h4 {
+  font-size: 22px;
+}
+
+.webprofiler_collectors_list {
+  display: flex;
+  flex-direction: column;
+  background-color: #fafbfd;
+}
+
+.webprofiler__collector {
+  color: #55565b;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 11px 42px 11px 22px;
+}
+
+.webprofiler__collector.active {
+  background: #f3f4f9;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.webprofiler__collector.active a {
+  color: #003ecc;
+}
+
+.webprofiler__collector:hover {
+  border: 1px solid #d4d4d8;
+  padding: 10px 41px 10px 21px;
+}
+
+.webprofiler__collector a {
+  color: #55565b;
+  text-decoration: none;
+}
+
+.webprofiler__panels {
+  margin-left: 44px;
+  flex-grow: 1;
+}
+
+.webprofiler__panels h2 {
+  color: #232429;
+  font-size: 28px;
+}
+
+.webprofiler__panels h3 {
+  color: #232429;
+  font-size: 22px;
+}
+
+.webprofiler__key {
+  width: 20%;
+}
+
+.webprofiler__value {
+  width: 80%;
+}
+
+.webprofiler__panel hr {
+  margin-bottom: 40px;
+}
+
+.webprofiler__panel .is-hidden {
+  display: none;
+}
+
+.webprofiler__cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.webprofiler__card {
+  width: 32%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-items: flex-start;
+  padding: 0;
+  border: var(--card-border-size) solid var(--card-border-color);
+  border-radius: var(--card-border-radius-size);
+  background-color: var(--card-bg-color);
+  box-shadow: var(--card-box-shadow);
+}
+
+
+.webprofiler__card__title {
+  padding: 5px 10px;
+  background-color: #003ecc;
+  color: #fff;
+}
+
+.webprofiler__card_content {
+  padding: 10px;
+}
+
+.wp-executable-actions {
+  border-bottom: 1px solid #d4d4d8;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 40px;
+  padding-bottom: 40px;
+}
+
+.wp-executable-toggle,
+.wp-query-copy,
+.wp-query-explain {
+  background-color: #003ecc;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 2px;
+  padding: 14px 24px;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.wp-executable-toggle:hover,
+.wp-query-copy:hover,
+.wp-query-explain:hover {
+  background-color: #002e9a;
+  color: #fff;
+}
+
+.wp-query-explain {
+  text-decoration: none;
+}
+
+#twig-dump pre {
+  font-size: 12px;
+  line-height: 1.7;
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  padding: 15px;
+  box-shadow: 0 0 1px rgba(128, 128, 128, .2);
+}
+#twig-dump span {
+  border-radius: 2px;
+  padding: 1px 2px;
+}
+#twig-dump .status-error {
+  background: transparent;
+  color: #b0413e;
+}
+#twig-dump .status-warning {
+  background: rgba(240, 181, 24, 0.3);
+}
+#twig-dump .status-success {
+  background: rgba(100, 189, 99, 0.2);
+}
+#twig-dump .status-info {
+  background: #ddf;
+}

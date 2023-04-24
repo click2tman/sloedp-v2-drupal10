@@ -1,0 +1,8 @@
+services:
+  plugin.manager.tfa:
+    class: Drupal\tfa\TfaPluginManager
+    parent: default_plugin_manager
+  tfa.route_subscriber:
+    class: Drupal\tfa\Routing\TfaRouteSubscriber
+    tags:
+      - { name: event_subscriber }

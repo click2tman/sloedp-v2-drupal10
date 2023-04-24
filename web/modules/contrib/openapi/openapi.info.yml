@@ -1,0 +1,13 @@
+name: OpenAPI
+type: module
+description: Connects Drupal to the OpenAPI Javascript Library
+core: 8.x
+core_version_requirement: ^8 || ^9 || ^10
+package: OpenAPI
+dependencies:
+  - drupal:serialization
+
+# Information added by Drupal.org packaging script on 2022-11-29
+version: '8.x-2.1'
+project: 'openapi'
+datestamp: 1669682977

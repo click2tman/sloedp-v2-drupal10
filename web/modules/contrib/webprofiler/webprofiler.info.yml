@@ -1,0 +1,16 @@
+name: WebProfiler
+type: module
+description: 'Drupal WebProfiler.'
+package: Development
+core_version_requirement: ^10
+configure: webprofiler.settings
+dependencies:
+  - devel:devel
+  - tracer:tracer
+tags:
+ - developer
+
+# Information added by Drupal.org packaging script on 2022-12-14
+version: '10.0.0'
+project: 'webprofiler'
+datestamp: 1671004736

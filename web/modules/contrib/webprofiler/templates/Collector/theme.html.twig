@@ -1,0 +1,49 @@
+{% block toolbar %}
+
+  {% set negotiator %}
+    <a href="{{ collector.themeNegotiator.class.file|file_link(collector.themeNegotiator.class.line) }}">{{ collector.themeNegotiator.class.class|abbr_class }} :: {{ collector.themeNegotiator.class.method }}</a>
+  {% endset %}
+  {% set time = collector.templatecount ? '%0.0f ms'|format(collector.time) : 'n/a' %}
+
+  {% set icon %}
+    {{ include('@webprofiler/Icon/twig.svg') }}
+    <span class="sf-toolbar-value">{{ collector.activeTheme.name }}</span>
+  {% endset %}
+
+  {% set text %}
+    <div class="sf-toolbar-info-piece">
+      <b>{{ 'Name'|t }}</b>
+      <span>{{ collector.activeTheme.name }}</span>
+    </div>
+    <div class="sf-toolbar-info-piece">
+      <b>{{ 'Engine'|t }}</b>
+      <span>{{ collector.activeTheme.engine }}</span>
+    </div>
+    <div class="sf-toolbar-info-piece">
+      <b>{{ 'Negotiator'|t }}</b>
+      <span>{{ negotiator }}</span>
+    </div>
+    <div class="sf-toolbar-info-piece">
+      <b>{{ 'Render Time'|t }}</b>
+      <span>{{ time }}</span>
+    </div>
+    <div class="sf-toolbar-info-piece">
+      <b>{{ 'Template Calls'|t }}</b>
+      <span>{{ collector.templatecount }}</span>
+    </div>
+    <div class="sf-toolbar-info-piece">
+      <b>{{ 'Block Calls'|t }}</b>
+      <span>{{ collector.blockcount }}</span>
+    </div>
+    <div class="sf-toolbar-info-piece">
+      <b>{{ 'Macro Calls'|t }}</b>
+      <span>{{ collector.macrocount }}</span>
+    </div>
+  {% endset %}
+
+  {{ include('@webprofiler/Profiler/toolbar_item.html.twig', { link: profiler_url }) }}
+{% endblock %}
+
+{% block panel %}
+  {{ collector.panel() }}
+{% endblock %}

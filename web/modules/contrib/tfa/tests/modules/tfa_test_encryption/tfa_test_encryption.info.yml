@@ -1,0 +1,10 @@
+name: TFA Test Encryption
+type: module
+package: Testing
+dependencies:
+  - drupal:user
+
+# Information added by Drupal.org packaging script on 2022-11-30
+version: '2.0.0-alpha2'
+project: 'tfa'
+datestamp: 1669821017

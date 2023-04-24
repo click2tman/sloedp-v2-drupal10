@@ -1,0 +1,88 @@
+@import "vars/_theme_variables";
+
+@import "mixins/mixins";
+@import "mixins/template";
+@import "rtl/rtl";
+
+@media (min-width: 768px) and (min-width: 992px){
+   .navigation .gva_menu .sub-menu li:hover > ul {
+      -webkit-transform: rotateX(0);
+      -moz-transform: rotateX(0);
+      -ms-transform: rotateX(0);
+      -o-transform: rotateX(0);
+      transform: rotateX(0);
+   }
+}
+
+.checkout-pane-payment-information{
+   margin-bottom: 20px; 
+   .field--name-address{
+      width: 100%;
+      float: left;
+   }
+}
+
+.customer-information{
+  .field__label{
+    font-weight: 600;
+    color: #222;
+    margin-top: 15px;
+  }
+}
+
+.order-information{
+  margin-bottom: 45px;
+  .field__label, .views-field-title{
+    font-weight: 600;
+    color: #222;
+  }
+  table{
+    margin-top: 30px;
+    thead{
+      th{
+        font-weight: 600;
+        color: #222; 
+      }
+    }
+  }
+}
+
+.checkout-pane-payment-information{
+   margin-bottom: 20px;
+   .field--name-address{
+      width: 100%;
+      float: left;
+   }
+}
+
+.path-user{
+  .order-information{
+    float: left;
+    width: 100%;
+    > .field{
+       float: left;
+       margin-right: 20px;
+       width: 30%;
+       @media(max-width: 300px){
+          width: 100%;
+       }
+       .field__label{
+          font-weight: 600;
+          color: #222;
+       }
+       &.field--name-order-items, &.field--name-total-price{ 
+          width: 100%;
+          margin-top: 20px;
+          margin-right: 0;
+       }
+    }
+  }
+}
+
+.form-item-payment-information-add-payment-method-billing-information-copy-to-address-book{width: 100%;float: left;}
+
+.alert{border-radius: 0!important;}
+.alert.alert-dark{
+  background-color: #f5f5f5;
+  border: 1px solid rgba(0,0,0,0.2);
+}

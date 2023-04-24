@@ -1,0 +1,11 @@
+name: Remove HTTP Headers
+type: module
+description: Removes configured HTTP Response headers.
+core_version_requirement: ^10
+package: Security
+configure: remove_http_headers.remove_http_headers_settings
+
+# Information added by Drupal.org packaging script on 2023-01-05
+version: '2.0.0'
+project: 'remove_http_headers'
+datestamp: 1672956099

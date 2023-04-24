@@ -1,0 +1,35 @@
+{
+    "name": "drupal/webprofiler",
+    "description": "Extract, collect, store and display profiling information for Drupal.",
+    "type": "drupal-module",
+    "support": {
+        "issues": "https://gitlab.com/drupalspoons/webprofiler/-/issues",
+        "slack": "https://app.slack.com/client/T06GX3JTS/C034XBTCHV0",
+        "source": "https://gitlab.com/drupalspoons/webprofiler"
+    },
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "Luca Lusso",
+            "email": "lussoluca@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=8.1.0",
+        "symfony/var-dumper": "^6",
+        "symfony/stopwatch": "^6",
+        "nette/php-generator": "^4.0",
+        "nikic/php-parser": "~4.0"
+    },
+    "require-dev": {
+        "mglaman/phpstan-drupal": "^1.1",
+        "phpstan/phpstan-deprecation-rules": "^1.0"
+    },
+    "extra": {
+        "drush": {
+            "services": {
+                "drush.services.yml": "^10"
+            }
+        }
+    }
+}

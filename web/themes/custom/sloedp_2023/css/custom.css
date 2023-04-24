@@ -1,0 +1,12 @@
+
+.node--type-candidates .layout--twocol-section.layout--twocol-section--50-50 > .layout__region--first, 
+.node--type-national-results .layout--twocol-section.layout--twocol-section--50-50 > .layout__region--first,
+.node--type-regional-results .layout--twocol-section.layout--twocol-section--50-50 > .layout__region--first,
+.node--type-district-results .layout--twocol-section.layout--twocol-section--50-50 > .layout__region--first,
+.node--type-ward-results .layout--twocol-section.layout--twocol-section--50-50 > .layout__region--first,
+.node--type-constituency-results .layout--twocol-section.layout--twocol-section--50-50 > .layout__region--first,
+.node--type-polling-centre-results .layout--twocol-section.layout--twocol-section--50-50 > .layout__region--first,
+.node--type-polling-station-results .layout--twocol-section.layout--twocol-section--50-50 > .layout__region--first,
+.node--type-candidates .layout--twocol-section.layout--twocol-section--50-50 > .layout__region--first{
+   padding-right:20px;
+}

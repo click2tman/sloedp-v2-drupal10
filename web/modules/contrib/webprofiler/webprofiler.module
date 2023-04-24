@@ -1,0 +1,90 @@
+<?php
+
+/**
+ * @file
+ * Drupal Webprofiler.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function webprofiler_theme() {
+  return [
+    'webprofiler_toolbar_js' => [
+      'template' => 'Profiler/toolbar_js',
+      'variables' => [
+        'excluded_ajax_paths' => '^\/.*\/profiler\/[a-z0-9]*',
+        'token' => '',
+        'request' => NULL,
+        'csp_script_nonce' => '',
+        'csp_style_nonce' => '',
+      ],
+    ],
+    'webprofiler_toolbar' => [
+      'template' => 'Profiler/toolbar',
+      'variables' => [
+        'request' => NULL,
+        'profile' => NULL,
+        'templates' => '',
+        'profiler_url' => '',
+        'token' => '',
+        'csp_script_nonce' => '',
+        'csp_style_nonce' => '',
+      ],
+    ],
+    'webprofiler_toolbar_redirect' => [
+      'template' => 'Profiler/toolbar_redirect',
+      'variables' => [
+        'location' => '',
+      ],
+    ],
+    'webprofiler_dashboard' => [
+      'template' => 'Profiler/dashboard',
+      'variables' => [
+        'collectors' => [],
+        'token' => '',
+        'profile' => NULL,
+      ],
+    ],
+    'webprofiler_dashboard_panel' => [
+      'template' => 'Profiler/dashboard_panel',
+      'variables' => [
+        'name' => '',
+        'template' => '',
+        'profile' => NULL,
+      ],
+    ],
+    'webprofiler_dashboard_section' => [
+      'template' => 'Profiler/dashboard_section',
+      'variables' => [
+        'title' => '',
+        'data' => [],
+      ],
+    ],
+    'webprofiler_dashboard_tabs' => [
+      'template' => 'Profiler/dashboard_tabs',
+      'variables' => [
+        'tabs' => [],
+      ],
+    ],
+    'webprofiler_dashboard_frontend' => [
+      'template' => 'Profiler/frontend',
+      'variables' => [
+        'performance' => [],
+        'cwv' => [],
+      ],
+    ],
+  ];
+}
+
+/**
+ * Implements hook_cache_flush().
+ */
+function webprofiler_cache_flush() {
+  $config = \Drupal::configFactory()->get('webprofiler.settings');
+
+  if ($config->get('purge_on_cache_clear')) {
+    $profiler = \Drupal::service('webprofiler.profiler');
+    $profiler->purge();
+  }
+}
